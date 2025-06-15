@@ -3,6 +3,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const burger = document.getElementById("burger");
   const navLinks = document.getElementById("nav-links");
+  const headerText = document.querySelector("header p");
 
   burger.addEventListener("click", () => {
     navLinks.classList.toggle("active");
@@ -40,4 +41,13 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 300);
     });
   });
+
+  // Fade in header text
+  if (headerText) {
+    headerText.style.opacity = "0";
+    headerText.style.transition = "opacity 1s ease";
+    requestAnimationFrame(() => {
+      headerText.style.opacity = "1";
+    });
+  }
 });

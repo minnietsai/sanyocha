@@ -8,8 +8,19 @@ body {
   color: #333;
 }
 
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+
 h1, h2, h3 {
   font-family: 'Cormorant Garamond', serif;
+}
+
+header p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  margin: 0.5em 0;
+  line-height: 1.4;
 }
 
 nav a {
@@ -56,6 +67,7 @@ header {
 .nav-links {
   display: flex;
   gap: 15px;
+  padding: 50px;
 }
 
 .burger {
@@ -128,6 +140,7 @@ header {
     display: flex;
     opacity: 1;
     transform: translateY(0);
+    text-align: center;
   }
 
   .burger {
